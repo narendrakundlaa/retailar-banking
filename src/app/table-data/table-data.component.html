@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>{{tableName}}</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="text-align: center;" *ngFor="let header of headers">{{ header | titlecase }}</th>
+                <th style="text-align: center;" *ngIf="showActionRow">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items">
+                <td style="text-align: left;" *ngFor="let header of headers">
+                    {{ item[header] }}
+                </td>
+                <td *ngIf="showActionRow">
+                    <button *ngIf="showUpdateBtn" class="btn btn-primary mr-2"
+                        (click)="updateData(item)">Update</button>
+                    <button *ngIf="showDeleteBtn" class="btn btn-danger" (click)="deleteData(item)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

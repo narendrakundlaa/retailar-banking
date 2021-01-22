@@ -1,0 +1,69 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "email": "pqr@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "account-details": [
+    {
+      "id": 2,
+      "name": "Narendra K",
+      "account": "Saving account",
+      "branch": "E-City",
+      "adharLink": "Yes",
+      "balance": 2280,
+      "bankName": "ICICI",
+      "AccountNumber": 1234567890
+    }
+  ],
+  "history": [],
+  "profile": [
+    {
+      "name": "Chintu",
+      "account": "123456",
+      "confirmAccount": "123456",
+      "bank": "HDFC",
+      "balance": 15000,
+      "date": "Fri Jan 22 2021",
+      "id": 1
+    },
+    {
+      "name": "Dhanu",
+      "account": "123456789",
+      "confirmAccount": "123456789",
+      "bank": "HDFC",
+      "balance": 5000,
+      "date": "Fri Jan 22 2021",
+      "id": 2
+    },
+    {
+      "name": "Manoj",
+      "account": "123",
+      "confirmAccount": "123",
+      "bank": "SBI",
+      "balance": 2500,
+      "date": "Fri Jan 22 2021",
+      "id": 3
+    },
+    {
+      "name": "narendra",
+      "account": "12321",
+      "confirmAccount": "12312",
+      "bank": "SBH",
+      "balance": 120,
+      "date": "Sat Jan 23 2021",
+      "id": 7
+    },
+    {
+      "name": "Kundla",
+      "account": "123",
+      "confirmAccount": "123",
+      "bank": "RBI",
+      "balance": 100,
+      "date": "Sat Jan 23 2021",
+      "id": 8
+    }
+  ]
+}

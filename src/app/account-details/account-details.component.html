@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">{{userName}}</div>
+    <div class="panel-body">
+      <ul *ngFor="let acc of account">
+        <li>Account: {{acc.account}}</li>
+        <li>A/C Number: <b>{{acc.AccountNumber}}</b></li>
+        <li>Branch: {{acc.branch}}</li>
+        <li>Bank Name: <b>{{acc.bankName}}</b></li>
+        <li>Verified Adhar: {{acc.adharLink}}</li>
+        <li>Available amount: <b>{{acc.balance}}</b></li>
+      </ul>
+    </div>
+    <div class="panel-footer">
+      <div class="btn-toolbar" *ngFor="let acc of account">
+        <button type="submit" class="btn btn-success" (click)="goToTransfer(acc)">Transfor Amount</button>
+        <button type="submit" class="btn btn-success">Back to Dashboard</button>
+      </div>
+    </div>
+  </div>
+  <style>
+    li {
+      list-style: none;
+    }
+  </style>
+  

@@ -1,0 +1,50 @@
+<app-alert-component [display]="displayAlert" [type]="alertType" [message]="alertMessage" (closeEvent)="closeAlert()">
+</app-alert-component>
+
+<div class="container" >
+    <h2 class="text-success">Transfer form </h2>
+    <form [formGroup]="transferMoney" (ngSubmit)="sendMoney()">
+        <div class="form-group">
+            <label for="name">Name : </label>
+            <input style="width: 500px" type="text" class="form-control" id="name" placeholder="Enter name"
+                formControlName="name" name="name"
+                [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div class="text-danger" *ngIf="f.name.errors.required">Name is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="account">account : </label>
+            <input style="width: 500px" type="text" class="form-control" formControlName="account" id="account"
+                placeholder="Enter account" name="account">
+        </div>
+
+        
+        <div class="form-group">
+          <label for="confirmAccount">confirmAccount : </label>
+          <input style="width: 500px" type="text" class="form-control" formControlName="confirmAccount" id="confirmAccount"
+              placeholder="Enter confirmAccount" name="confirmAccount">
+      </div>
+
+        <div class="form-group">
+            <label for="bank">bank : </label>
+            <input style="width: 500px" type="bank" class="form-control" formControlName="bank" id="bank"
+                placeholder="Enter bank" name="bank" [ngClass]="{ 'is-invalid': submitted && f.bank.errors }" />
+            <div *ngIf="submitted && f.bank.errors" class="invalid-feedback">
+                <div class="text-danger" *ngIf="f.bank.errors.required">bank is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="balance">amount : </label>
+            <input style="width: 500px" type="number" class="form-control" formControlName="balance" id="balance"
+                placeholder="Enter amount" name="balance" [ngClass]="{ 'is-invalid': submitted && f.balance.errors }" />
+                <span *ngIf="alertBalanceMessage" class="text-danger">Your Current Balance is {{accountInformation.balance | currency:'INR'}} and exceeding more than available balance</span>
+            <div *ngIf="submitted && f.balance.errors" class="invalid-feedback">
+                <div class="text-danger" *ngIf="f.balance.errors.required">amount is required</div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Money</button>
+    </form>
+</div>
